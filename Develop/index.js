@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 const output = 'README.md';
-const readMe = "";
+let readMe = "";
 
 // TODO: Create an array of questions for user input
 //re-worked the module code
@@ -139,7 +139,7 @@ const promptUser = () => {
 
 const writeFile = fileContent => {
   return new Promise((resolve, reject) => {
-    fs.writeFile('./dist/${output}', fileContent, err => {
+    fs.writeFile(`./dist/${output}`, fileContent, err => {
       if (err) {
         reject(err);
         return;

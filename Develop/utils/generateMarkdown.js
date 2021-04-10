@@ -3,7 +3,7 @@ const renderLicenseBadge = "";
 // If there is no license, return an empty string
 
 //https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
-const renderLicenseBadge = (license) => {
+renderLicenseBadge = (license) => {
   if (license == 'None') {
     return `None`;
   }

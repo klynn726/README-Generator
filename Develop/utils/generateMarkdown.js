@@ -5,13 +5,13 @@
 //https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 const renderLicenseBadge = (license) => {
   if (license == 'None') {
-    return `None`;
+    badge = `None`;
   }
   else if  (license == 'MIT') {
-  return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+   badge =  `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
   }
   else if (license == 'Mozilla 2.0') {
-    return `![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`;
+    badge = `![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`;
   }
 };
 
@@ -21,7 +21,7 @@ function generateMarkdown(data) {
   return  `
   # Project Title: ${data.title}
 
-  ${renderLicenseBadge}
+  ${badge}
 
   ## Table of Contents
 

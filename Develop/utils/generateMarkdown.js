@@ -1,17 +1,17 @@
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-let badge = "";
+
 //https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 const renderLicenseBadge = (license) => {
   if (license == 'None') {
-    badge = `None`;
+    return `None`;
   }
-  else if  (license == 'MIT') {
-   badge =  `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+  if  (license == 'MIT') {
+  return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
   }
-  else if (license == 'Mozilla 2.0') {
-    badge = `![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`;
+ if (license == 'Mozilla 2.0') {
+    return `![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`;
   }
 };
 
@@ -19,11 +19,9 @@ const renderLicenseBadge = (license) => {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   renderLicenseBadge();
-  
+
   return  `
   # Project Title: ${data.title}
-
-  ${badge}
 
   ## Table of Contents
 

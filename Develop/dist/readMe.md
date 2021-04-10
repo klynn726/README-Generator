@@ -14,17 +14,17 @@
 * [Questions](#questions)
 
 
-## Description: yo mama
+## Description: yo
 
-## Instillation: yo mama
+## Instillation: yo
 
-## Usage: yo mama
+## Usage: yo
 
-## Contributors: yo mama
+## Contributors: yo
 
-## Tests: yo mama
+## Tests: yo
 
 ## License: MIT
 
-## Questions:  yo mama yo maam yo mama
+## Questions: yo yo yo
 

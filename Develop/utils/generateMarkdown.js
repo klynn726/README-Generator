@@ -6,6 +6,7 @@
 const renderLicenseBadge = (license) => {
   if (license == 'None') {
     return `None`;
+    
   }
   if  (license == 'MIT') {
   return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
@@ -18,10 +19,11 @@ const renderLicenseBadge = (license) => {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  renderLicenseBadge();
 
   return  `
   # Project Title: ${data.title}
+
+ ${renderLicenseBadge(data.license)}
 
   ## Table of Contents
 

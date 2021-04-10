@@ -1,7 +1,7 @@
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-
+let badge = "";
 //https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 const renderLicenseBadge = (license) => {
   if (license == 'None') {

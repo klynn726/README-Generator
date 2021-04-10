@@ -33,4 +33,4 @@ Katherine Lynn with starter code from UofA bootcamp
 
 
 step by step walkthrough of the application:
-<iframe src="https://drive.google.com/file/d/1GymPRkxbYLfAhNnYvZhwBtXcElUr_idX/preview" width="640" height="480"></iframe>
+[Walkthrough](https://drive.google.com/file/d/1GymPRkxbYLfAhNnYvZhwBtXcElUr_idX/preview)

@@ -18,6 +18,8 @@ const renderLicenseBadge = (license) => {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  renderLicenseBadge();
+  
   return  `
   # Project Title: ${data.title}
 

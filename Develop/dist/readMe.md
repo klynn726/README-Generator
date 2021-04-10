@@ -1,7 +1,5 @@
 
-  # Project Title: yo mama
-
-  
+  # Project Title: yo
 
   ## Table of Contents
 
@@ -14,11 +12,11 @@
 * [Questions](#questions)
 
 
-## Description: yo
+## Description: yp
 
-## Instillation: yo
+## Instillation: yp
 
-## Usage: yo
+## Usage: yp
 
 ## Contributors: yo
 

@@ -119,6 +119,19 @@ const promptUser = () => {
           return false;
         }
       }
+    },
+    {
+      type: 'input',
+      name: 'contact',
+      message: 'Please enter directions on how to contact you (Required)',
+      validate: contactInput => {
+        if (contactInput) {
+          return true;
+        } else {
+          console.log('Please enter directions on how to contact you.');
+          return false;
+        }
+      }
     }
   ]);
 };

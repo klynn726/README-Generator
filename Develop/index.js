@@ -5,12 +5,13 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const output = 'README.md';
 
 // TODO: Create an array of questions for user input
+//re-worked the module code
 
 const promptUser = () => {
   return inquirer.prompt([
     {
       type: 'input',
-      name: 'Title',
+      name: 'title',
       message: 'What is the title? (Required)',
       validate: nameInput => {
         if (nameInput) {
@@ -23,7 +24,7 @@ const promptUser = () => {
     },
     {
       type: 'input',
-      name: 'Description',
+      name: 'description',
       message: 'Please write a description of your project. (Required)',
       validate: descriptionInput => {
         if (descriptionInput) {
@@ -36,7 +37,7 @@ const promptUser = () => {
     },
     {
       type: 'input',
-      name: 'Installation instructions',
+      name: 'installation',
       message: 'What are the installation instructions? (Required)',
       validate: installInput => {
         if (installInput) {
@@ -46,15 +47,48 @@ const promptUser = () => {
           return false;
         }
       }
-    },  {
+    }, 
+     {
       type: 'input',
-      name: 'Usage',
-      message: 'How is this project to be used? (Required)',
+      name: 'usage',
+      message: 'what are the instructions to use this project? (Required)',
+      validate: useInput => {
+        if (useInput) {
+          return true;
+        } else {
+          console.log('Please enter a usage instructions.');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: "Select a project license with the arrow keys",
+      choices: ['None', 'MIT', 'Mozilla 2.0']
+    },
+    {
+      type: 'input',
+      name: 'contributors',
+      message: 'Who contributed to the production of this project? (Required)',
       validate: useInput => {
         if (useInput) {
           return true;
         } else {
           console.log('Please enter a title.');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'How do you test this project? (Required)',
+      validate: testsInput => {
+        if (testsInput) {
+          return true;
+        } else {
+          console.log('Please enter test directions.');
           return false;
         }
       }
@@ -67,19 +101,27 @@ const promptUser = () => {
         if (githubInput) {
           return true;
         } else {
-          console.log('Please enter your GitHub username!');
+          console.log('Please enter your GitHub username.');
           return false;
         }
       }
     },
     {
-      type: 'list',
-      name: 'License',
-      message: "Select a project license with the arrow keys",
-      choices: ['None', 'MIT', 'Mozilla 2.0']
-    },
+      type: 'input',
+      name: 'email',
+      message: 'Please enter your email address (Required)',
+      validate: emailInput => {
+        if (emailInput) {
+          return true;
+        } else {
+          console.log('Please enter your email address.');
+          return false;
+        }
+      }
+    }
   ]);
 };
+
 
 const writeFile = fileContent => {
   return new Promise((resolve, reject) => {
